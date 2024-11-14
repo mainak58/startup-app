@@ -67,6 +67,6 @@ function AddForm() {
 }
 
 function Image({ message }: { message: { url: string } }) {
-    return <img src={message.url} height="300px" width="auto" />;
+    return <img src={message.url} height="300px" width="auto"  alt="Post image"/>;
 }
 export default AddForm;

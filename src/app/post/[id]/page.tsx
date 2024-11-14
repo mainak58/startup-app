@@ -3,6 +3,7 @@
 import { useQuery } from "convex/react";
 import { useParams, useRouter } from "next/navigation";
 import { api } from "../../../../convex/_generated/api";
+import Image from "next/image";
 
 export default function ExampleClientComponent() {
     const router = useRouter();
@@ -25,7 +26,7 @@ export default function ExampleClientComponent() {
                         <p className="text-gray-600 mt-2">{message.body}</p>
 
                         {message.format === "image" && message.url ? (
-                            <Image message={message} />
+                            <Image message={message} height="300" width="300" alt="my image"/>
                         ) : (
                             <h1 className="text-gray-500 mt-4">No images</h1>
                         )}

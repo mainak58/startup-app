@@ -12,16 +12,16 @@ export default function SearchPage({
 }) {
     const searchQuery =
         typeof searchParams.query === "string" ? searchParams.query : "";
+
     const [query, setQuery] = useState(searchQuery);
 
-
     const searchResults = useQuery(api.tasks.search, { query }) || [];
-    
+
     useEffect(() => {
         if (searchQuery !== query) {
             setQuery(searchQuery);
         }
-    }, [searchQuery]);
+    }, []);
 
     return (
         <div>

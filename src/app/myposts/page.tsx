@@ -21,7 +21,7 @@ function Page() {
                             <p className="text-gray-600 mt-2">{message.body}</p>
 
                             {message.format === "image" ? (
-                                <Image message={message} />
+                                <Image message={message} alt="my image" />
                             ) : (
                                 <h1 className="text-gray-500 mt-4">
                                     No images

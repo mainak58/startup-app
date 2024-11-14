@@ -29,7 +29,7 @@ export default function Home() {
                             <p className="text-gray-600 mt-2">{message.body}</p>
 
                             {message.format === "image" && message.url ? (
-                                <Image message={message} />
+                                <Image message={message} alt="Post image" />
                             ) : (
                                 <h1 className="text-gray-500 mt-4">
                                     No images
