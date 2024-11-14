@@ -22,7 +22,7 @@ export default function Home() {
             <div className="content-div">
                 {listAll?.map((message) => (
                     <li key={message._id} className="p-4">
-                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <div className="bg-white shadow-lg rounded-lg p-6 content-container">
                             <h2 className="text-xl font-semibold text-gray-800">
                                 {message.title}
                             </h2>
