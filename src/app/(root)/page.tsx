@@ -5,6 +5,7 @@ import SearchForm from "@/components/SearchForm";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
     const listAll = useQuery(api.tasks.listAllDocuments) || [];
@@ -35,14 +36,14 @@ export default function Home() {
                                     No images
                                 </h1>
                             )}
-                            <button
+                            <Button
                                 onClick={() => {
-                                    console.log(message._id)
+                                    console.log(message._id);
                                     router.push(`/post/${message._id}`);
                                 }}
                             >
                                 Load
-                            </button>
+                            </Button>
                         </div>
                     </li>
                 ))}

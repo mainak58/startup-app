@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { useParams, useRouter } from "next/navigation";
 import { api } from "../../../../convex/_generated/api";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
 
 export default function ExampleClientComponent() {
     const router = useRouter();
@@ -14,9 +15,9 @@ export default function ExampleClientComponent() {
     });
 
     return (
+        <>
+        <Navbar />
         <div>
-            <h2>URL Parameters:</h2>
-            <h2>{params.id}</h2>
             {myPosts?.map((message) => (
                 <li key={message._id} className="p-4">
                     <div className="bg-white shadow-lg rounded-lg p-6">
@@ -42,5 +43,6 @@ export default function ExampleClientComponent() {
                 </li>
             ))}
         </div>
+        </>
     );
 }
