@@ -78,7 +78,6 @@
 .post-item {
     height: auto;
     width: auto;
-    background-color: brown;
     margin: 8px 0;
 }
 
@@ -87,7 +86,6 @@
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     padding: 16px;
     border-radius: 8px;
 }
@@ -97,7 +95,6 @@
 }
 
 .content-container {
-    background-color: blueviolet;
     width: 100%;
     max-width: 500px;
     padding: 16px;
@@ -107,7 +104,9 @@
 @media (min-width: 768px) {
     .main-container {
         width: 100%;
-        height: auto;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
     }
 
     .content-div {
@@ -123,9 +122,11 @@
 
 @media (min-width: 1024px) {
     .main-container {
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         padding: 32px;
+        justify-content: center;
+        align-items: center;
     }
 
     .content-div,
